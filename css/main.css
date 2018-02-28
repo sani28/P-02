@@ -216,11 +216,18 @@
 }
 .cardlarge .imgboxcl{
   height:400px; /*-- IMAGE WONT SHOW UP WITHOUT THIS, i wanted to use a % but it didnt work--*/
-  background-image: url("img/CherryBlossomGaiwanTeaSet10PiecesSet.jpg");
+  /* background-image: url("img/CherryBlossomGaiwanTeaSet10PiecesSet.jpg"); */
   background-size: cover;
   background-position: center center;
   width: 100%;
 }
+.cardlarge #cherryteaset{
+  background-image: url("img/CherryBlossomGaiwanTeaSet10PiecesSet.jpg");
+}
+.cardlarge #treasurerscollection{
+  background-image: url("img/Treasurer's Collection.jpg");
+}
+
 .cardlarge .pricecl{
   float: right;
   display: inline;
