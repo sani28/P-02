@@ -550,6 +550,7 @@ code, samp {
     font-size: 12px;
     padding-right: 30px;
     border: none;
+    background-color: white;
 }
 
 .dropdown {
