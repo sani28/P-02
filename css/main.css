@@ -195,7 +195,7 @@
           flex: 0 0 auto;
   margin-right: 3px;
 }
-
+/*------------------------- card  --------------------------*/
 .card {
   border: 1px solid white;
   width: 200px;
@@ -207,31 +207,33 @@
   font-size: 8px;
 }
 
-.cardlarge{
-  border: 1px solid black;
+/*------------------------- please work its 2am --------------------------*/
+.cardlarge {
+  /* border: 1px solid black; */
   margin: auto;
   width: 50%;
+  height: 50%;
 }
-.cardlarge .product-photo-cl{
-    background-size: cover;
-    background-position: center center;
-    width:auto;
-}
-.cardlarge .product-photo-cl .gallerybox .testimg{
-  /* position: relative;
-  margin: auto; */
+.cardlarge .imgboxcl{
+  height:400px; /*-- IMAGE WONT SHOW UP WITHOUT THIS, i wanted to use a % but it didnt work--*/
+  background-image: url("img/CherryBlossomGaiwanTeaSet10PiecesSet.jpg");
   background-size: cover;
   background-position: center center;
-  width: auto;
+  width: 100%;
 }
-
-.cardlarge .product-photo-cl .itemnameprice{
-  display: flex;
-}
-
-.cardlarge .price{
+.cardlarge .pricecl{
   float: right;
+  display: inline;
 }
+.cardlarge .namecl{
+  float: left;
+  display: inline;
+}
+.cardlarge .descriptioncl{
+  clear: both;
+}
+
+/*--------------------------------------------------------------------------*/
 
 .scrolling-wrapper, .scrolling-wrapper-flexbox {
   height: 350px;
