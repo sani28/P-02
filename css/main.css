@@ -163,22 +163,6 @@
   height: 100%;
 }
 
-/* #splash-item-1 {
-  display:flex;
-  float:left;
-  color: white;
-  border: 1px solid white;
-  margin-top: 50%;
-}
-
-#splash-item-2 {
-  float:right;
-  color:white;
-  border: 1px solid white;
-  margin-top: 100%;
-
-} */
-
 /* ------------------------- image styling ------------------------ */
 
 .about-images {
@@ -388,6 +372,7 @@ a {
 
 	text-decoration: none;
 	font-size: 0.8rem;
+  padding-right: 30px;
 	/*
 		Setting colours for elements can be done in a variety of ways. You can use just the colour name 'blue', you can use a HEX value '#00AAFF', you can specify an rgb value 'rgb(0,200,255)', and you can specify an rgb value with alpha (or opacity) using 'rgba(0,200,255,0.8)' (80%).
 	*/
@@ -559,9 +544,11 @@ code, samp {
 /* ------------------------- dropdown menu ------------------------- */
 
 .dropbtn {
+    display: flex;
     font-family: 'Adobe arabic';
     letter-spacing: 1px;
     font-size: 12px;
+    padding-right: 30px;
     border: none;
 }
 
