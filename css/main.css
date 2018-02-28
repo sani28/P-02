@@ -201,7 +201,37 @@
   width: 200px;
   height: 300px;
 }
+.card .price {
+  margin-top: 10%;
+  margin-left: 70%;
+  font-size: 8px;
+}
 
+.cardlarge{
+  border: 1px solid black;
+  margin: auto;
+  width: 50%;
+}
+.cardlarge .product-photo-cl{
+    background-size: cover;
+    background-position: center center;
+    width:auto;
+}
+.cardlarge .product-photo-cl .gallerybox .testimg{
+  /* position: relative;
+  margin: auto; */
+  background-size: cover;
+  background-position: center center;
+  width: auto;
+}
+
+.cardlarge .product-photo-cl .itemnameprice{
+  display: flex;
+}
+
+.cardlarge .price{
+  float: right;
+}
 
 .scrolling-wrapper, .scrolling-wrapper-flexbox {
   height: 350px;
@@ -252,7 +282,7 @@ div#post {
 }
 
 .numbered-list{
-	font-style: italic;
+	font-style: italic;11
 }
 
 .citations {
@@ -501,13 +531,6 @@ code, samp {
 .product-photo {
   margin-left: 17%;
   margin-top: 5%;
-}
-
-.price {
-  margin-top: 10%;
-  margin-left: 70%;
-  font-size: 8px;
-
 }
 
 .container {
