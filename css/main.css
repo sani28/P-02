@@ -21,7 +21,7 @@
     opacity: 1;
   }
 }
-/* ------------------------- fade in animation front page ------------------------- */
+
 
 .inner {
   position: absolute;
@@ -43,7 +43,6 @@
   letter-spacing: 4px;
 
 }
-
 .inner p {
   margin: 0;
   font-size: 1.4em;
@@ -135,7 +134,7 @@
 }
 
 .description {
-  font-size: 0.3rem;
+  font-size: 0.6rem;
   line-height: 1.55;
   color: #7a7b80;
   font-family: 'Raleway', sans-serif;
@@ -196,21 +195,101 @@
           flex: 0 0 auto;
   margin-right: 3px;
 }
-
+/*------------------------- card  --------------------------*/
 .card {
   border: 1px solid white;
   width: 200px;
-  height: 300px;
+  height: 230px;
+}
+.card .price {
+  margin-top: 10%;
+  margin-left: 70%;
+  font-size: 8px;
 }
 
+<<<<<<< Updated upstream
+/*------------------------- please work its 2am --------------------------*/
+.cardlarge {
+  /* border: 1px solid black; */
+  margin: auto;
+  width: 50%;
+  height: 50%;
+}
+.cardlarge .imgboxcl{
+  height:400px; /*-- IMAGE WONT SHOW UP WITHOUT THIS, i wanted to use a % but it didnt work--*/
+  /* background-image: url("img/CherryBlossomGaiwanTeaSet10PiecesSet.jpg"); */
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+}
+.cardlarge #cherryteaset{
+  background-image: url("img/CherryBlossomGaiwanTeaSet10PiecesSet.jpg");
+}
+.cardlarge #treasurerscollection{
+  background-image: url("img/Treasurer's Collection.jpg");
+}
 
+.cardlarge .pricecl{
+  float: right;
+  display: inline;
+}
+.cardlarge .namecl{
+  float: left;
+  display: inline;
+}
+.cardlarge .descriptioncl{
+  clear: both;
+}
+
+/*--------------------------------------------------------------------------*/
+
+=======
+>>>>>>> Stashed changes
 .scrolling-wrapper, .scrolling-wrapper-flexbox {
-  height: 350px;
+  height: 248px;
   width: 100%;
   -webkit-overflow-scrolling: touch;
 }
 .scrolling-wrapper::-webkit-scrollbar, .scrolling-wrapper-flexbox::-webkit-scrollbar {
   display: none;
+}
+
+
+/* -------------------------product description------------------------- */
+.prod-description{
+    width: 49%;
+    float:left;
+    height: 600px;
+    /* border: 1px solid red; */
+}
+
+#wrapper {
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+  padding: 20px;
+}
+
+.prod-description-price {
+  width: 100%;
+  height: 30px;
+  /* border: 1px solid red; */
+}
+
+.prod-title{
+  /* width: 100%; */
+  /* border: 1px solid red; */
+}
+
+.gram {
+  display: inline;
+  border: none;
+  font-size: 1rem;
+  display: inline;
+  padding-right: 30%;
+  padding-bottom: 3%;
+  width: 100%;
+  /* border: 1px solid red; */
 }
 
 /* ------------------------- media queries ------------------------- */
@@ -227,6 +306,12 @@
   .nav-main {
     display: flex;
   }
+}
+
+
+/* if media screen is less than 570px */
+@media screen and (max-width: 570px) {
+
 }
 
 /* -------------------------style guide codes ------------------------- */
@@ -253,7 +338,7 @@ div#post {
 }
 
 .numbered-list{
-	font-style: italic;
+	font-style: italic;11
 }
 
 .citations {
@@ -293,7 +378,7 @@ h1 {
 	margin-bottom: 10;
 }
 
-h2 {
+h2{
 	font-size: 0.8rem;
 	margin-left: 50px;
 }
@@ -317,13 +402,43 @@ h4 {
 h6{
   font-family: 'Cutive Mono', monospace;
   font-size: 0.2rem;
+  margin-left: 50px;
+}
+
+h7 {
+  display: flex;
+  font-size: 1rem;
+}
+
+ol {
+    background: white;
+    padding: 20px;
+}
+
+ul {
+    background: white;
+    padding: 20px;
+}
+
+ul li {
+    background: #ededed;
+    margin: 1em;
+}
+
+.previous {
+    background-color: white;
+}
+
+.additional-info {
+  font-family: 'Cutive Mono', monospace;
+  padding: 5%;
+  /* border: 1px solid red; */
 }
 
 /*
 	Below we are setting defaults for a series of selectors. The comma allows us to select a combination of elements.
 */
 p, ol, ul {
-
 	/*
 		max-width is a property which easily allows us to ensure something does not extend past a certain point in width. In this case, we can use it to make line-lengths more manageable in our text.
 	*/
@@ -354,7 +469,6 @@ img {
 table {
 
 	font-size: 12px;
-
 	box-sizing: border-box;
 
 }
@@ -367,7 +481,6 @@ tr td {
 th, td {
     border-bottom: 1px solid #ddd;
 }
-
 
 a {
 
@@ -382,6 +495,21 @@ a {
 		The transition property makes it very easy to create smooth transitions for different CSS properties. In this case, we are specifying that we want to transition the 'color' property over 0.5 seconds. Note that you have to have another state for the element for it to actually make use of the transition.
 	*/
 	transition: color 0.5s;
+}
+
+#add-to-cart {
+  display: inline;
+  float:right;
+  font-size: 0.8rem;
+  background-color: white;
+  color: black;
+  border: 1.5px solid #e7e7e7;
+  margin-top: 5%;
+}
+
+
+#add-to-cart:hover {
+  background-color: #e7e7e7;
 }
 
 a#in-text {
@@ -412,6 +540,8 @@ a#nav-button:hover {
 	border-radius: 10px 10px;
 	padding: 4%;
   width: 100px;
+
+
 }
 
 .homepage {
@@ -470,16 +600,9 @@ code, samp {
   box-sizing: border-box;
 }
 
-/* .card {
-   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-   transition: 0.3s;
-   width: 100px;
-   border-radius: 5px;
-} */
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-
 }
 
 [class*='col-'] {
@@ -492,6 +615,7 @@ code, samp {
   font-size: 10px;
   font-family: 'adobe arabic'
 }
+
 .col-1-3 {
   width: 20%;
   padding: 2%;
@@ -502,15 +626,22 @@ code, samp {
   margin-top: 5%;
 }
 
-{
+<<<<<<< Updated upstream
+=======
+.price {
   margin-top: 10%;
-  margin-left: 70%;
-  font-size: 8px;
+  margin-left: 90%;
+  font-size: 10px;
 
 }
 
+>>>>>>> Stashed changes
 .container {
   padding: 2px 16px;
+}
+
+.table-xs{
+  width: 100%;
 }
 
 .grid-container {
@@ -519,12 +650,14 @@ code, samp {
   background-color: grey;
   padding: 10px;
 }
+
 .grid-item {
   background-color: lightgrey;
   text-align: center;
   padding: 20px;
   font-size: 30px;
 }
+
 .item1 {
   grid-column: 1 / span 3 ;
   grid-row: 3;
@@ -532,6 +665,7 @@ code, samp {
   margin-bottom: 20%;
 
 }
+
 .item5 {
   grid-column: 1 / span 3;
   grid-row: 1;
@@ -549,6 +683,7 @@ code, samp {
     font-size: 12px;
     padding-right: 30px;
     border: none;
+    background-color: white;
 }
 
 .dropdown {

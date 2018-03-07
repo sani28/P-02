@@ -10,6 +10,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css">
 
+		<!-- <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'> -->
+
 	</head>
 
 	<body>
@@ -53,16 +55,43 @@
 
 		<!-- MAIN CONTENT -->
 		<h3> my cart </h3>
-		<div class="splash">
-        <div class="half-grid">
-          <div id="splash-item-1">
 
-          </div>
-          <div id="splash-item-2">
-
-          </div>
-        </div>
+		<div class="container">
+		  <table class="table table-xs">
+		    <tr>
+		      <th></th>
+		      <th>Description</th>
+		      <th class="text-right">Amount</th>
+		      <th class="text-right">Price</th>
+		      <th class="text-right">Total</th>
+		    </tr>
+		    <tr class="item-row">
+		      <td> <img src="img/BloodOrangeblack.png" style="width: 50px; height: 50px;"/></td>
+		      <td>
+		        <p> <strong>Item 1</strong></p>
+		        <p>Amet et esse do nostrud id irure cupidatat labore nulla irure laboris</p>
+		      </td>
+		      <td class="text-right" title="Amount">3</td>
+		      <td class="text-right" title="Price">2.00</td>
+		      <td class="text-right" title="Total">6.00</td>
+		    </tr>
+		    <tr class="item-row item-row-last">
+		      <td> <img src="img/CreamOfEarlGrey.png" style="width: 50px; height: 50px;"/></td>
+		      <td>
+		        <p> <strong>Item 2</strong></p>
+		        <p>Amet et esse do nostrud id irure cupidatat labore nulla irure laboris</p>
+		      </td>
+		      <td class="text-right" title="Amount">3</td>
+		      <td class="text-right" title="Price">4.00</td>
+		      <td class="text-right" title="Total">12.00</td>
+		    </tr>
+		    <tr class="total-row info">
+		      <td class="text-right" colspan="4">Total</td>
+		      <td class="text-right">18.00</td>
+		    </tr>
+		  </table>
 		</div>
+
 
 
 			<!-- FOOTER -->
