@@ -300,19 +300,16 @@
 #wrapper {
   display: inline-flex;
   padding: 20px;
+
 }
 
 .prod-features {
-  /* border: 2px solid black; */
-  box-sizing: border-box;
   padding: 5%;
 }
 
 .prod-description{
   display: inline-block;
-  width: 50%;
-  /* height: auto; */
-
+  width: 60%;
 }
 
 .prod-description-price {
@@ -408,10 +405,9 @@ div#post {
   height: 20px;
 }
 
-p#footer {
-  position: absolute;
-  justify-content: bottom;
-  background-color: #f6f6f6;
+.footer{
+  width: 100%;
+  display: block;
 }
 
 body {
@@ -782,7 +778,6 @@ code, samp {
 
     display: block;
 }
-
 .dropdown:hover .dropbtn {
     background-color: none;
 }
