@@ -212,33 +212,65 @@
 .cardlarge {
   /* border: 1px solid black; */
   margin: auto;
-  width: 50%;
+  align-content: center;
+  max-width: 60%;
   height: 50%;
 }
-.cardlarge .imgboxcl{
-  height:400px; /*-- IMAGE WONT SHOW UP WITHOUT THIS, i wanted to use a % but it didnt work--*/
+/* .cardlarge  */
+.imgboxcl{
+  height:auto; /*-- IMAGE WONT SHOW UP WITHOUT THIS, i wanted to use a % but it didnt work--*/
   /* background-image: url("img/CherryBlossomGaiwanTeaSet10PiecesSet.jpg"); */
   background-size: cover;
   background-position: center center;
-  width: 100%;
+  /* width: 100%; */
+  max-width: 60%;
 }
-.cardlarge #cherryteaset{
+
+.cardlarge-tile-icon{
+  max-width: 100%;
+  height: auto;
+  }
+
+#cherryteaset{
   background-image: url("img/CherryBlossomGaiwanTeaSet10PiecesSet.jpg");
 }
-.cardlarge #treasurerscollection{
+#treasurerscollection{
   background-image: url("img/Treasurer's Collection.jpg");
 }
 
-.cardlarge .pricecl{
+.pricecl{
   float: right;
   display: inline;
 }
-.cardlarge .namecl{
+.namecl{
   float: left;
   display: inline;
 }
 .cardlarge .descriptioncl{
   clear: both;
+}
+/*--------------------------------------- card large menu-------------------------------*/
+
+.cardlarge-grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: space-around;
+  align-content: space-around;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+/* .cardlarge-grid-container{
+  margin: 0px, 50px;
+} */
+
+.cardlarge-tile{
+  width: 30%;
+  height: auto;
+  border: 1px solid black;
+  margin: 2% 1%;
 }
 
 /*--------------------------------------------------------------------------*/
