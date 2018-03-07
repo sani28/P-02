@@ -22,6 +22,7 @@
   }
 }
 
+/* -------------------------Fade in effect title on homepage ------------------------- */
 
 .inner {
   position: absolute;
@@ -50,7 +51,7 @@
   font-family: 'adobe arabic';
 }
 
-/* -------------------------top header styling ------------------------- */
+/* -------------------------Top header styling ------------------------- */
 .logo {
   display: inline-block;
   width: 30%;
@@ -60,7 +61,8 @@
 
 .nav-main {
   display:inline;
-  margin-left: 12%;
+  width: 100%;
+  margin-left: 4%;
   padding: 10px;
   font-family: 'Adobe arabic';
   letter-spacing: 1px;
@@ -141,7 +143,7 @@
 }
 
 
-/* ------------------------- main content ------------------------- */
+/* ------------------------- Main content ------------------------- */
 
 .splash{
   width: 100%;
@@ -163,14 +165,20 @@
   height: 100%;
 }
 
-/* ------------------------- image styling ------------------------ */
+/* ------------------------- Image styling ------------------------ */
 
 .about-images {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-/* ------------------------- product scroll styling------------------------- */
+.tea-thumbnail {
+  width: 12em;
+  height: auto;
+
+}
+
+/* ------------------------- Product scroll styling------------------------- */
 
 .scrolling-wrapper {
   overflow-x: scroll;
@@ -195,7 +203,7 @@
           flex: 0 0 auto;
   margin-right: 3px;
 }
-/*------------------------- card  --------------------------*/
+/*------------------------- Card  --------------------------*/
 .card {
   border: 1px solid white;
   width: 200px;
@@ -269,7 +277,7 @@
 .cardlarge-tile{
   width: 30%;
   height: auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 2% 1%;
 }
 
@@ -288,41 +296,48 @@
 
 
 /* -------------------------product description------------------------- */
-.prod-description{
-    width: 49%;
-    float:left;
-    height: 600px;
-    /* border: 1px solid red; */
-}
 
 #wrapper {
-  display: flex;
-  width: 70%;
-  margin-left: 15%;
+  display: inline-flex;
   padding: 20px;
+}
+
+.prod-features {
+  /* border: 2px solid black; */
+  box-sizing: border-box;
+  padding: 5%;
+}
+
+.prod-description{
+  display: inline-block;
+  width: 50%;
+  /* height: auto; */
+
 }
 
 .prod-description-price {
   width: 100%;
-  height: 30px;
-  /* border: 1px solid red; */
+  height: 5%;
 }
 
 .prod-title{
-  /* width: 100%; */
-  /* border: 1px solid red; */
+  width: 100%;
+  height: 5;
+  /* border: 5px solid black; */
 }
 
 .gram {
   display: inline;
+  width:100%;
   border: none;
   font-size: 1rem;
   display: inline;
   padding-right: 30%;
   padding-bottom: 3%;
-  width: 100%;
+  /* width: 50%; */
   /* border: 1px solid red; */
 }
+
 
 /* ------------------------- media queries ------------------------- */
 /* if media screen is less than 1300px */
@@ -341,8 +356,13 @@
 }
 
 
-/* if media screen is less than 570px */
-@media screen and (max-width: 570px) {
+
+@media screen and (max-width: 930px) {
+
+    #product.prod-description {
+      /* width: 100%; */
+
+    }
 
 }
 
@@ -382,6 +402,10 @@ div#post {
   display: inline-flex;
   float: right;
   height: 20px;
+}
+
+p#footer {
+  background-color: #f6f6f6;
 }
 
 body {
@@ -435,12 +459,9 @@ h6{
   font-family: 'Cutive Mono', monospace;
   font-size: 0.2rem;
   margin-left: 50px;
+  width: 40em;
 }
 
-h7 {
-  display: flex;
-  font-size: 1rem;
-}
 
 ol {
     background: white;
@@ -459,6 +480,9 @@ ul li {
 
 .previous {
     background-color: white;
+    text-decoration: none;
+    font-style: normal;
+    color: salmon;
 }
 
 .additional-info {
@@ -477,7 +501,7 @@ p, ol, ul {
 	max-width: 40rem;
 	/* font-family: 'Rasa', serif; */
   font-family: 'Adobe arabic';
-  font-size: 9px;
+  font-size: 12px;
 }
 
 
@@ -517,7 +541,7 @@ th, td {
 a {
 
 	text-decoration: none;
-	font-size: 0.8rem;
+	font-size: 1em;
   padding-right: 30px;
 	/*
 		Setting colours for elements can be done in a variety of ways. You can use just the colour name 'blue', you can use a HEX value '#00AAFF', you can specify an rgb value 'rgb(0,200,255)', and you can specify an rgb value with alpha (or opacity) using 'rgba(0,200,255,0.8)' (80%).
@@ -531,12 +555,13 @@ a {
 
 #add-to-cart {
   display: inline;
-  float:right;
   font-size: 0.8rem;
   background-color: white;
   color: black;
   border: 1.5px solid #e7e7e7;
-  margin-top: 5%;
+  margin-top: 1%;
+  width: 100%;
+  float:right;
 }
 
 
@@ -574,6 +599,12 @@ a#nav-button:hover {
   width: 100px;
 
 
+}
+
+#price {
+  font-size: 2rem;
+  width: 100%;
+  float:right;
 }
 
 .homepage {
@@ -712,7 +743,7 @@ code, samp {
     display: flex;
     font-family: 'Adobe arabic';
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 18px;
     padding-right: 30px;
     border: none;
     background-color: white;
@@ -742,6 +773,7 @@ code, samp {
 .dropdown-content a:hover {background-color: #ddd}
 
 .dropdown:hover .dropdown-content {
+
     display: block;
 }
 
