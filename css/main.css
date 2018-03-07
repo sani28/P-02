@@ -357,11 +357,15 @@
 
 
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 900px) {
 
-    #product.prod-description {
-      /* width: 100%; */
+    .prod-features {
+      width: 100%;
+    }
 
+    .prod-description {
+      width: 100%;
+      margin-left: -5%;
     }
 
 }
@@ -405,6 +409,8 @@ div#post {
 }
 
 p#footer {
+  position: absolute;
+  justify-content: bottom;
   background-color: #f6f6f6;
 }
 
