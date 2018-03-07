@@ -21,7 +21,7 @@
     opacity: 1;
   }
 }
-
+/* ------------------------- fade in animation front page ------------------------- */
 
 .inner {
   position: absolute;
@@ -43,6 +43,7 @@
   letter-spacing: 4px;
 
 }
+
 .inner p {
   margin: 0;
   font-size: 1.4em;
@@ -195,52 +196,13 @@
           flex: 0 0 auto;
   margin-right: 3px;
 }
-/*------------------------- card  --------------------------*/
+
 .card {
   border: 1px solid white;
   width: 200px;
   height: 300px;
 }
-.card .price {
-  margin-top: 10%;
-  margin-left: 70%;
-  font-size: 8px;
-}
 
-/*------------------------- please work its 2am --------------------------*/
-.cardlarge {
-  /* border: 1px solid black; */
-  margin: auto;
-  width: 50%;
-  height: 50%;
-}
-.cardlarge .imgboxcl{
-  height:400px; /*-- IMAGE WONT SHOW UP WITHOUT THIS, i wanted to use a % but it didnt work--*/
-  /* background-image: url("img/CherryBlossomGaiwanTeaSet10PiecesSet.jpg"); */
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-}
-.cardlarge #cherryteaset{
-  background-image: url("img/CherryBlossomGaiwanTeaSet10PiecesSet.jpg");
-}
-.cardlarge #treasurerscollection{
-  background-image: url("img/Treasurer's Collection.jpg");
-}
-
-.cardlarge .pricecl{
-  float: right;
-  display: inline;
-}
-.cardlarge .namecl{
-  float: left;
-  display: inline;
-}
-.cardlarge .descriptioncl{
-  clear: both;
-}
-
-/*--------------------------------------------------------------------------*/
 
 .scrolling-wrapper, .scrolling-wrapper-flexbox {
   height: 350px;
@@ -291,7 +253,7 @@ div#post {
 }
 
 .numbered-list{
-	font-style: italic;11
+	font-style: italic;
 }
 
 .citations {
@@ -450,8 +412,6 @@ a#nav-button:hover {
 	border-radius: 10px 10px;
 	padding: 4%;
   width: 100px;
-
-
 }
 
 .homepage {
@@ -542,6 +502,13 @@ code, samp {
   margin-top: 5%;
 }
 
+{
+  margin-top: 10%;
+  margin-left: 70%;
+  font-size: 8px;
+
+}
+
 .container {
   padding: 2px 16px;
 }
@@ -582,7 +549,6 @@ code, samp {
     font-size: 12px;
     padding-right: 30px;
     border: none;
-    background-color: white;
 }
 
 .dropdown {
