@@ -62,7 +62,7 @@
 .nav-main {
   display:inline;
   width: 100%;
-  margin-left: 4%;
+  margin-left: 2%;
   padding: 10px;
   font-family: 'Adobe arabic';
   letter-spacing: 1px;
@@ -173,9 +173,8 @@
 }
 
 .tea-thumbnail {
-  width: 12em;
+  width: 10em;
   height: auto;
-
 }
 
 /* ------------------------- Product scroll styling------------------------- */
@@ -339,6 +338,7 @@
 /* ------------------------- media queries ------------------------- */
 /* if media screen is less than 1300px */
 @media screen and (max-width: 1200px) {
+  zoom: 100%;
   .nav-main {
     display: inline-block;
     margin-left: 2%;
@@ -364,6 +364,22 @@
       width: 100%;
       margin-left: -5%;
     }
+
+    .tea-thumbnail {
+      width: 30em;
+      height: auto;
+    }
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .tea-thumbnail {
+    width: 50em;
+  }
+}
+
+@media screen and (max-width: 400px) {
 
 }
 
