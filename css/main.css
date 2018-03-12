@@ -1,8 +1,13 @@
+/* fade in animation reference by  Arnór Ýmir Guðjónsson: https://codepen.io/arnorymir/pen/yaNVgq
+
+
 /* declare a custom font */
 @font-face {
     font-family: headerFont;
     src: url(../SentyGoldenBell.ttf);
 }
+
+/* ------------------------- fade in effect title on homepage ------------------------- */
 
 @-webkit-keyframes fade-in {
   0% {
@@ -22,12 +27,10 @@
   }
 }
 
-/* -------------------------Fade in effect title on homepage ------------------------- */
-
-.inner {
+.fade-in-text {
   position: absolute;
-  margin-top: 100px;
   margin-left: 180px;
+  margin-top: 150px;
   opacity: 0;
   z-index: 10;
   -webkit-transform: translateX(-60%) translateY(-60%);
@@ -36,7 +39,7 @@
           animation: fade-in 1s 0.25s ease-in forwards;
 }
 
-.inner h1 {
+.fade-in-text h1 {
   margin: 0;
   font-size: 1em;
   line-height: 1.2em;
@@ -44,19 +47,20 @@
   letter-spacing: 4px;
 
 }
-.inner p {
+.fade-in-text p {
   margin: 0;
   font-size: 1.4em;
   font-style: italic;
   font-family: 'adobe arabic';
 }
 
+
 /* -------------------------Top header styling ------------------------- */
+
 .logo {
   display: inline-block;
   width: 30%;
   padding-bottom: 2%;
-
 }
 
 .nav-main {
@@ -68,53 +72,8 @@
   letter-spacing: 1px;
 }
 
-.l-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.l-column-start-2 {
-  margin-left: auto;
-  width: 50%;
-}
-
-/* Reset fallback styles */
-  .l-column-start-2 {
-    margin-top: 4%;
-    width: auto;
-  }
-
-  .l-grid {
-    display: grid;
-    /* margin-top: -150px; */
-  }
-}
-.l-grid--2-col {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
-.l-grid--full-height {
-  grid-template-rows: minmax(100vh, 1fr);
-}
-
-.l-column-start-2 {
-  grid-column-start: 1;
-}
-
-.l-align-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.l-full-height {
-  min-height: 100vh;
-}
-
 .content {
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .heading {
@@ -151,20 +110,131 @@
   height: 600px;
 }
 
-.half-grid-1 {
-  /* border: 1px solid white; */
-   float: left;
-   width: 50%;
-   height: 100%;
+.homepage {
+  display: flex;
+  width: 100%;
+  height: 500px;
 }
 
-.half-grid-2 {
-  /* border: 1px solid blue; */
-  float:right;
-  width: 50%;
-  height: 100%;
+.footer{
+  width: 100%;
+  display: block;
 }
 
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+body {
+
+	font-family: 'Cutive Mono', monospace;
+	font-style: normal;
+	margin: 1rem;
+	font-size: 1.25rem;
+}
+
+h1 {
+
+	font-size: 1rem;
+
+	margin-bottom: 10;
+}
+
+h2{
+	font-size: 0.8rem;
+	margin-left: 50px;
+}
+
+h3 {
+	font-size: 1rem;
+  font-family: 'adobe arabic';
+  font-style: italic;
+  letter-spacing: 1px;
+	margin-bottom: 0;
+  padding-left: 10px;
+}
+
+h4 {
+  font-size:1rem;
+  padding: 20px;
+  margin-bottom: 0;
+  font-family: 'adobe arabic';
+}
+
+h6{
+  font-family: 'Cutive Mono', monospace;
+  font-size: 0.5em;
+  margin-left: 50px;
+  width: 40em;
+}
+
+ol {
+    background: white;
+    padding: 20px;
+}
+
+ul {
+    background: white;
+    padding: 20px;
+}
+
+ul li {
+    background: #ededed;
+    margin: 1em;
+}
+
+p, ol, ul {
+	max-width: 40rem;
+  font-family: 'Adobe arabic';
+  font-size: 12px;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	border: none;
+}
+
+table {
+	font-size: 12px;
+	box-sizing: border-box;
+
+}
+
+tr td {
+	padding: 15px;
+
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+a {
+	text-decoration: none;
+	font-size: 0.8em;
+  font-family: 'Adobe arabic';
+  padding-right: 30px;
+	color: #000000;
+	transition: color 0.5s;
+}
+
+a:active, a:hover, a:focus {
+	color: rgb(50,0,0);
+	text-decoration: none;
+}
+
+
+a#in-text {
+	font-family: 'Rasa', serif;
+}
+
+a:hover#in-text {
+	 box-shadow: inset 0 -1px 0 0 black;
+}
 /* ------------------------- Image styling ------------------------ */
 
 .about-images {
@@ -175,6 +245,12 @@
 .tea-thumbnail {
   width: 10em;
   height: auto;
+}
+
+.product-photo {
+  width: 50%;
+  margin-left: 17%;
+  margin-top: 5%;
 }
 
 /* ------------------------- Product scroll styling------------------------- */
@@ -202,7 +278,29 @@
           flex: 0 0 auto;
   margin-right: 3px;
 }
-/*------------------------- Card  --------------------------*/
+
+/* ----------  arrows to indicate scrolling action for products -------------*/
+
+i {
+  border:solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 10px;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.right {
+   transform: rotate(180deg);
+   -webkit-transform: rotate(180deg);
+}
+
+
+/*------------------------- product cards  --------------------------*/
 .card {
   border: 1px solid white;
   width: 200px;
@@ -214,131 +312,27 @@
   font-size: 8px;
 }
 
-<<<<<<< Updated upstream
-/*------------------------- please work its 2am --------------------------*/
-.cardlarge {
-  /* border: 1px solid black; */
-  margin: auto;
-  align-content: center;
-  max-width: 60%;
-  height: 50%;
-}
-/* .cardlarge  */
-.imgboxcl{
-  height:auto; /*-- IMAGE WONT SHOW UP WITHOUT THIS, i wanted to use a % but it didnt work--*/
-  /* background-image: url("img/CherryBlossomGaiwanTeaSet10PiecesSet.jpg"); */
-  background-size: cover;
-  background-position: center center;
-  /* width: 100%; */
-  max-width: 60%;
-}
-
-.cardlarge-tile-icon{
-  max-width: 100%;
-  height: auto;
-  }
-
-#cherryteaset{
-  background-image: url("img/CherryBlossomGaiwanTeaSet10PiecesSet.jpg");
-}
-#treasurerscollection{
-  background-image: url("img/Treasurer's Collection.jpg");
-}
-
-.pricecl{
-  float: right;
-  display: inline;
-}
-.namecl{
-  float: left;
-  display: inline;
-}
-.cardlarge .descriptioncl{
-  clear: both;
-}
 /*--------------------------------------- card large menu-------------------------------*/
 
 .cardlarge-grid{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* align-items: center; */
   justify-content: space-around;
   align-content: space-around;
   margin-left: 6%;
   margin-right: 6%;
 }
 
-/* .cardlarge-grid-container{
-  margin: 0px, 50px;
-} */
-
 .cardlarge-tile{
   width: 30%;
   height: auto;
-  /* border: 1px solid black; */
   margin: 2% 1%;
 }
-
-/*--------------------------------------------------------------------------*/
-
-=======
->>>>>>> Stashed changes
-.scrolling-wrapper, .scrolling-wrapper-flexbox {
-  height: 248px;
-  width: 100%;
-  -webkit-overflow-scrolling: touch;
-}
-.scrolling-wrapper::-webkit-scrollbar, .scrolling-wrapper-flexbox::-webkit-scrollbar {
-  display: none;
-}
-
-
-/* -------------------------product description------------------------- */
-
-#wrapper {
-  display: inline-flex;
-  padding: 20px;
-
-}
-
-.prod-features {
-  padding: 5%;
-}
-
-.prod-description{
-  display: inline-block;
-  width: 60%;
-}
-
-.prod-description-price {
-  width: 100%;
-  height: 5%;
-}
-
-.prod-title{
-  width: 100%;
-  height: 5;
-  /* border: 5px solid black; */
-}
-
-.gram {
-  display: inline;
-  width:100%;
-  border: none;
-  font-size: 1rem;
-  display: inline;
-  padding-right: 30%;
-  padding-bottom: 3%;
-  /* width: 50%; */
-  /* border: 1px solid red; */
-}
-
 
 /* ------------------------- media queries ------------------------- */
 /* if media screen is less than 1300px */
 @media screen and (max-width: 1200px) {
-  zoom: 100%;
   .nav-main {
     display: inline-block;
     margin-left: 2%;
@@ -352,35 +346,46 @@
   }
 }
 
-
-
 @media screen and (max-width: 900px) {
 
     .prod-features {
       width: 100%;
     }
-
     .prod-description {
       width: 100%;
-      margin-left: -5%;
     }
 
     .tea-thumbnail {
       width: 30em;
       height: auto;
     }
-
 }
-
 
 @media screen and (max-width: 500px) {
   .tea-thumbnail {
     width: 50em;
   }
+
 }
 
-@media screen and (max-width: 400px) {
+/* -------------------------login page form styling ------------------------- */
 
+
+input{
+  color:#bdbdbd ;
+}
+input[type=password].valid,input[type=text].valid,input[type=email].invalid,input[type=email].valid{
+  color: #bdbdbd!important;
+}
+
+.input-field input[type=text]:focus + label {
+     color: #fff;
+}
+
+.submit {
+  text-decoration: none;
+  border: 1px solid grey;
+  font-size: 10px;
 }
 
 /* -------------------------style guide codes ------------------------- */
@@ -396,7 +401,7 @@ div#subheading {
 }
 
 div#post {
-	font-family: headerFont;
+	font-family:  headerFont;
 	font-size: 1rem;
 	font-style: italic;
 }
@@ -421,156 +426,6 @@ div#post {
   height: 20px;
 }
 
-.footer{
-  width: 100%;
-  display: block;
-}
-
-body {
-
-	font-family: 'Cutive Mono', monospace;
-	font-style: normal;
-
-	/*
-		Margin sets the spacing outside of the borders of an element's box. Because we are only setting one value below, it makes it the margin value for all sides of our box, which in this case is all sides of our body element.
-	*/
-	margin: 1rem;
-
-	/*
-		Setting a default font size for all elements who are children of the body tag. How 'rems' work are explained in the next comment.
-	*/
-	font-size: 1.25rem;
-}
-
-/*
-	With the selection of the different heading elements below, we are using 'rem' units to establish a default hierarchy for their font sizes. Rem units refer to 'root-em' which are a multiple of the base font-size set by the browser. As a result, rem units are particularly useful for establishing hierarchies in type.
-*/
-h1 {
-
-	font-size: 1rem;
-
-	margin-bottom: 10;
-}
-
-h2{
-	font-size: 0.8rem;
-	margin-left: 50px;
-}
-
-h3 {
-	font-size: 1rem;
-  font-family: 'adobe arabic';
-  font-style: italic;
-  letter-spacing: 1px;
-	margin-bottom: 0;
-  padding-left: 10px;
-}
-
-h4 {
-  font-size:0.4rem;
-  padding:20px;
-  margin-bottom: 0;
-  font-family: 'helvetica';
-}
-
-h6{
-  font-family: 'Cutive Mono', monospace;
-  font-size: 0.2rem;
-  margin-left: 50px;
-  width: 40em;
-}
-
-
-ol {
-    background: white;
-    padding: 20px;
-}
-
-ul {
-    background: white;
-    padding: 20px;
-}
-
-ul li {
-    background: #ededed;
-    margin: 1em;
-}
-
-.previous {
-    background-color: white;
-    text-decoration: none;
-    font-style: normal;
-    color: salmon;
-}
-
-.additional-info {
-  font-family: 'Cutive Mono', monospace;
-  padding: 5%;
-  /* border: 1px solid red; */
-}
-
-/*
-	Below we are setting defaults for a series of selectors. The comma allows us to select a combination of elements.
-*/
-p, ol, ul {
-	/*
-		max-width is a property which easily allows us to ensure something does not extend past a certain point in width. In this case, we can use it to make line-lengths more manageable in our text.
-	*/
-	max-width: 40rem;
-	/* font-family: 'Rasa', serif; */
-  font-family: 'Adobe arabic';
-  font-size: 12px;
-}
-
-
-img {
-	/*
-		We are saying we want the img to adjust its height accordingly when the width changes.
-	*/
-	height: auto;
-
-	/*
-		Then we tell it we don't want it to exceed 100% of the parent element. In this case it resizes with the 'body' tag (the browser window).
-	*/
-	max-width: 100%;
-
-	/*
-		Below is a compound statement. In the case of the border property, it sets the width type colour values in that order when given them.
-	*/
-	border: none;
-}
-
-table {
-
-	font-size: 12px;
-	box-sizing: border-box;
-
-}
-
-tr td {
-	padding: 15px;
-
-}
-
-th, td {
-    border-bottom: 1px solid #ddd;
-}
-
-a {
-
-	text-decoration: none;
-	font-size: 1em;
-  padding-right: 30px;
-	/*
-		Setting colours for elements can be done in a variety of ways. You can use just the colour name 'blue', you can use a HEX value '#00AAFF', you can specify an rgb value 'rgb(0,200,255)', and you can specify an rgb value with alpha (or opacity) using 'rgba(0,200,255,0.8)' (80%).
-	*/
-	color: #000000;
-	/*
-		The transition property makes it very easy to create smooth transitions for different CSS properties. In this case, we are specifying that we want to transition the 'color' property over 0.5 seconds. Note that you have to have another state for the element for it to actually make use of the transition.
-	*/
-	transition: color 0.5s;
-}
-
 #add-to-cart {
   display: inline;
   font-size: 0.8rem;
@@ -582,18 +437,24 @@ a {
   float:right;
 }
 
-
 #add-to-cart:hover {
   background-color: #e7e7e7;
 }
 
-a#in-text {
-	font-family: 'Rasa', serif;
+
+.previous {
+    background-color: white;
+    text-decoration: none;
+    font-style: normal;
+    color: salmon;
 }
 
-a:hover#in-text {
-	 box-shadow: inset 0 -1px 0 0 black;
+
+.additional-info {
+  font-family: 'Cutive Mono', monospace;
+  padding: 5%;
 }
+
 
 #nav-button {
 	font-family: headerFont, serif;
@@ -615,8 +476,6 @@ a#nav-button:hover {
 	border-radius: 10px 10px;
 	padding: 4%;
   width: 100px;
-
-
 }
 
 #price {
@@ -625,67 +484,11 @@ a#nav-button:hover {
   float:right;
 }
 
-.homepage {
-  display: flex;
-  width: 100%;
-  height: 500px;
-}
-
-input{
-  color:#bdbdbd ;
-}
-input[type=password].valid,input[type=text].valid,input[type=email].invalid,input[type=email].valid{
-  color: #bdbdbd!important;
-}
-
-.input-field input[type=text]:focus + label {
-     color: #fff;
-}
-
-.submit {
-  text-decoration: none;
-  border: 1px solid grey;
-  font-size: 10px;
-
-}
-/*
-	The :active, :hover and :focus are pseudo-states for the element. In this case, we are saying when the anchor tag is 'active' (being clicked on), 'hover' (being hovered over), and 'focus' (selected by keyboard, i.e. tab), it should apply the styling specified.
-*/
-a:active, a:hover, a:focus {
-	color: rgb(50,0,0);
-	text-decoration: none;
-}
-
-code, samp {
-
-	display: block;
-	background-color: rgb(230,230,230);
-	/*
-		While margin sets the space outside of our border box, padding is the space between the border and the content itself.
-	*/
-	padding: 0.5rem;
-}
-
-.style-table {
-	padding: 5%;
-	padding-top: 3%;
-}
-
-.style {
-	width: 100%;
-}
-
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+/* ------------------------- cart page syling ------------------------- */
 [class*='col-'] {
   float: left;
 }
@@ -702,25 +505,6 @@ code, samp {
   padding: 2%;
 }
 
-.product-photo {
-  margin-left: 17%;
-  margin-top: 5%;
-}
-
-<<<<<<< Updated upstream
-=======
-.price {
-  margin-top: 10%;
-  margin-left: 90%;
-  font-size: 10px;
-
-}
-
->>>>>>> Stashed changes
-.container {
-  padding: 2px 16px;
-}
-
 .table-xs{
   width: 100%;
 }
@@ -731,6 +515,10 @@ code, samp {
   background-color: grey;
   padding: 10px;
 }
+
+
+/* ------------------------- style guide display ------------------------- */
+
 
 .grid-item {
   background-color: lightgrey;
@@ -754,14 +542,13 @@ code, samp {
 
 }
 
-
 /* ------------------------- dropdown menu ------------------------- */
 
 .dropbtn {
     display: flex;
     font-family: 'Adobe arabic';
     letter-spacing: 1px;
-    font-size: 18px;
+    font-size: 0.8em;
     padding-right: 30px;
     border: none;
     background-color: white;
@@ -796,4 +583,46 @@ code, samp {
 }
 .dropdown:hover .dropbtn {
     background-color: none;
+}
+
+
+/* -------------------------product description------------------------- */
+
+#wrapper {
+  display: inline-flex;
+  padding: 20px;
+}
+
+.prod-features {
+  padding: 5%;
+}
+
+.prod-description{
+  display: inline-block;
+  width: 70%;
+}
+
+.prod-description-price {
+  width: 100%;
+  height: 5%;
+}
+
+.prod-extra-info{
+  font-size: 1.2em;
+  display:flex;
+}
+
+.prod-title{
+  width: 100%;
+  height: 5;
+}
+
+.gram {
+  display: inline;
+  width:100%;
+  border: none;
+  font-size: 1rem;
+  display: inline;
+  padding-right: 30%;
+  padding-bottom: 3%;
 }
